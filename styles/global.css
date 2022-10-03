@@ -1,0 +1,184 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Futura PT';
+  src: url('../public/fonts/Futura-PT/FuturaPTBold.otf');
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('../public/fonts/Avenir-Next/AvenirNext-Regular.ttf');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@layer base {
+  body {
+    @apply font-body;
+  }
+  div,
+  figure {
+    @apply relative;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-semibold font-display;
+  }
+  h1 {
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl;
+  }
+  h2 {
+    @apply text-2xl sm:text-3xl md:text-4xl;
+  }
+  h3 {
+    @apply text-xl;
+  }
+  h4 {
+    @apply text-lg;
+  }
+  .prose p,
+  .prose ul {
+    @apply text-black;
+  }
+  .prose ul li {
+    @apply before:!text-brand-red;
+  }
+  input[type='text'],
+  input[type='email'],
+  input[type='phone'],
+  textarea {
+    @apply w-full h-full text-black placeholder-black bg-transparent outline-none appearance-none;
+  }
+  input[type='radio'] {
+    @apply w-4 h-4 border border-black appearance-none;
+  }
+  select {
+    @apply py-2 border-0 border-b-2 border-black rounded-none appearance-none;
+  }
+  div[data-col-span='2'] {
+    @apply col-span-1 md:col-span-2;
+  }
+}
+@layer components {
+  .contain {
+    @apply mx-auto w-[85%] xl:w-full xl:max-w-screen-xl;
+  }
+  .contain-sm {
+    @apply mx-auto w-[85%] xl:w-full xl:max-w-screen-lg;
+  }
+  .row {
+    @apply py-10 md:py-20;
+  }
+  .row-sm {
+    @apply py-5 md:py-10;
+  }
+  .input-group {
+    @apply relative hover:after:bg-black/40 py-2 after:w-full after:h-[2px] after:absolute after:bottom-0 after:left-0 after:bg-black/20 after:block before:block before:w-0 focus-within:before:w-full before:h-[2px] before:absolute before:bottom-0 before:left-0 before:bg-black before:z-10 before:transition-all before:duration-500;
+  }
+  .options-group {
+    @apply space-y-2;
+  }
+  .options-group h3 {
+    @apply font-normal uppercase;
+  }
+  .radio-group {
+    @apply flex items-center space-x-2 text-sm font-medium uppercase;
+  }
+  .btn {
+    @apply px-4 py-2 font-bold !text-white !no-underline rounded-full uppercase font-bold font-display transition-all bg-brand-red hover:ring-4 ring-brand-red/20;
+  }
+
+  .radio-group input {
+    @apply flex items-center justify-center w-5 h-5 transition-all scale-90 border-2 rounded-sm cursor-pointer after:w-5 after:h-5 hover:ring-2 ring-black/10;
+  }
+  .radio-group input:checked {
+    @apply scale-100 bg-brand-red border-brand-red ring-2 ring-brand-red/20;
+  }
+  .journey-line {
+    @apply z-10  w-[1px] block h-full content-[''] bg-black absolute left-1/2 -translate-x-1/2;
+  }
+  .content-row {
+    @apply grid gap-5 md:gap-10 row-sm contain;
+  }
+  .content-row[data-columns='2'] {
+    @apply md:grid-cols-2;
+  }
+  .content-row[data-columns='3'] {
+    @apply md:grid-cols-2 lg:grid-cols-3;
+  }
+  .content-row[data-columns='4'] {
+    @apply md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4;
+  }
+
+  .parsed p:not(:first-of-type) {
+    @apply mt-5;
+  }
+  .parsed h2,
+  .parsed h3,
+  .parsed h4 {
+    @apply mb-5;
+  }
+  .parsed ul,
+  .parsed ol {
+    @apply mt-5 list-inside;
+  }
+  .parsed ol {
+    @apply list-decimal;
+  }
+  .parsed ul {
+    @apply list-disc;
+  }
+  .parsed a {
+    @apply text-brand-red hover:underline;
+  }
+  #page-content > div {
+    @apply first:pt-0;
+  }
+  #grid-links {
+    @apply grid gap-5 md:grid-cols-2 xl:grid-cols-4;
+  }
+  #grid-links[data-items='2'] {
+    @apply sm:grid-cols-2;
+  }
+  #grid-links[data-items='2'] > li > a {
+    @apply sm:aspect-w-16 sm:aspect-h-8;
+  }
+  #grid-links[data-items='3'] {
+    @apply sm:grid-cols-2 md:grid-cols-3;
+  }
+  #crumbs li[data-index='0'] {
+    @apply hidden md:flex;
+  }
+}
+
+#google::after {
+  content: '';
+  @apply h-4 w-4 rounded-full bg-brand-red opacity-40 absolute left-1 top-2/4  -translate-y-2/4 transform scale-110 transition duration-200;
+}
+#google:checked::after {
+  @apply transform scale-110 translate-x-5 opacity-100;
+}
+
+#cookies::after {
+  content: '';
+  @apply h-4 w-4 rounded-full bg-brand-red opacity-40 absolute left-1 top-2/4  -translate-y-2/4 transform scale-110 transition duration-200;
+}
+#cookies:checked::after {
+  @apply transform scale-110 opacity-100 translate-x-5;
+}
+
+.light_box{
+  background-color: #2b2b356c;
+  pointer-events: none;
+}
+
+.light_box div{
+  pointer-events: all;
+}

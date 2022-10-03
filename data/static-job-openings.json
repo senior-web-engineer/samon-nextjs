@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Position 3",
+    "featuredImage": {
+      "node": {
+        "mediaItemUrl": "https://samon-cms.h.capacedev.se/wp-content/uploads/2021/11/Rectangle-6.png"
+      }
+    }
+  },
+  {
+    "title": "Position 2",
+    "featuredImage": {
+      "node": {
+        "mediaItemUrl": "https://samon-cms.h.capacedev.se/wp-content/uploads/2021/12/visualsofdana-T5pL6ciEn-I-unsplash-scaled.jpg"
+      }
+    }
+  },
+  {
+    "title": "Position 1",
+    "featuredImage": {
+      "node": {
+        "mediaItemUrl": "https://samon-cms.h.capacedev.se/wp-content/uploads/2021/12/redd-5U_28ojjgms-unsplash-scaled.jpg"
+      }
+    }
+  }
+]

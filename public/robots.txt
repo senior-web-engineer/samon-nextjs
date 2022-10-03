@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.samon.se
+
+# Sitemaps
+Sitemap: https://www.samon.se/sitemap.xml

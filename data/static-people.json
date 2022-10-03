@@ -1,0 +1,26 @@
+{
+  "peopleheading": "Our people",
+  "peopletext": "Our strenght comes from our differences. Since SAMON is delivering world class gas detectors all around the world, we are operating in an truly international environment, why it comes natural to us to build the company of people with wide and different backgrounds. We are proud to have almost half our organisation from different countries.  ",
+  "team": [
+    {
+      "name": "Firstname Lastname",
+      "title": "CEO",
+      "phone": "072-213 13 41",
+      "email": "firstname@samon.se",
+      "image": {
+        "mediaItemUrl": "https://samon-cms.h.capacedev.se/wp-content/uploads/2021/11/Rectangle-95.png"
+      }
+    }
+  ],
+  "directors": [
+    {
+      "name": "Firstname Lastname",
+      "title": "CEO",
+      "phone": "072-213 13 41",
+      "email": "firstname@samon.se",
+      "image": {
+        "mediaItemUrl": "https://samon-cms.h.capacedev.se/wp-content/uploads/2021/11/Rectangle-95.png"
+      }
+    }
+  ]
+}
